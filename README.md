@@ -44,3 +44,7 @@ place_id: 3,
 name: 'quadra',
 type_id: 3
 }]
+-------
+GET /health
+-
+* OK!
