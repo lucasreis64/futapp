@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model fields {
+  id       Int    @id(map: "fields_pk") @default(autoincrement())
+  place_id Int
+  name     String
+  type_id  Int
+  places   places @relation(fields: [place_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fields_fk0")
+  types    types  @relation(fields: [type_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fields_fk1")
+}
+
+model places {
+  id     Int      @id(map: "places_pk") @default(autoincrement())
+  local  String
+  fields fields[]
+}
+
+model types {
+  id     Int      @id(map: "types_pk") @default(autoincrement())
+  name   String
+  fields fields[]
+}
