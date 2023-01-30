@@ -10,9 +10,7 @@ app
   .use(express.json())
   .get("/health", (_req, res) => res.send("OK!"))
   .use("/fields", fieldsRouter)
-/*   .use("/places", placesRouter)
-  .use("/types", typessRouter);
- */
+
 app.listen(4000, ()=>{
   console.log('Server Running on port 4000')
 });
