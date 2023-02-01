@@ -1,5 +1,5 @@
-import { fieldsEntity } from "src/protocols.js";
-import prisma from "../database/database.js";
+import { fieldsEntity } from "../protocols";
+import prisma from "../database/database";
 
 
 async function findMany() {

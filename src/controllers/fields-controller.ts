@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import fieldsService from "../services/fields-services.js";
-import fieldsRepository from "../repositories/fields-repository.js";
+import fieldsService from "../services/fields-services";
+import fieldsRepository from "../repositories/fields-repository";
 
 export async function findAll(req: Request, res: Response) {
     try {
@@ -33,8 +33,8 @@ export async function insertOne(req: Request, res: Response) {
 
         return res.status(201).send(fields);
     } catch (err) {
-      if (err === 400) return res.status(400).send('nonexistent place or type');
-      res.status(500).send(err);
+        if (err === 400) return res.status(400).send('nonexistent place or type');
+        res.status(500).send(err);
     }
 }
 

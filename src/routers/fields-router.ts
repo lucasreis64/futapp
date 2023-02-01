@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { deleteOne, findAll, insertOne, updateOne } from "../controllers/fields-controller.js";
-import { validateBody } from "../middlewares/validation-middleware.js";
-import { fieldsSchema, updateNameSchema } from "../schemas/fields-schema.js";
+import { deleteOne, findAll, insertOne, updateOne } from "../controllers/fields-controller";
+import { validateBody } from "../middlewares/validation-middleware";
+import { fieldsSchema, updateNameSchema } from "../schemas/fields-schema";
 
 
 

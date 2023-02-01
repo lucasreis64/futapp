@@ -1,7 +1,7 @@
-import placesRepository from "../repositories/places-repository.js";
-import typesRepository from "../repositories/types-repository.js";
-import { fieldsEntity } from "../protocols.js";
-import fieldsRepository from "../repositories/fields-repository.js";
+import placesRepository from "../repositories/places-repository";
+import typesRepository from "../repositories/types-repository";
+import { fieldsEntity } from "../protocols";
+import fieldsRepository from "../repositories/fields-repository";
 
 async function updateOne(id: number, name: string) {
     const isExistentId = await fieldsRepository.findById(id);
